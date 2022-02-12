@@ -1,0 +1,143 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  user-select: none;
+}
+
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+#app {
+  background-color: #2c2f33;
+  display: grid;
+  grid-template-columns: 9.5fr 2.5fr;
+}
+
+#app .game {
+  position: relative;
+}
+
+#app .side {
+  background-color: #5865f2;
+}
+
+.bubble {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(63, 251, 208, 0) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+
+  position: absolute;
+}
+
+.bubble::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  left: 20%;
+  top: 20%;
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.game-stats,
+.rounds-container,
+.score-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rounds-container,
+.score-container {
+  padding: 10px;
+  background-color: white;
+  border-radius: 4px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.rounds-container > * {
+  padding: 6px;
+}
+
+.rounds,
+.timer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rounds-title,
+.timer-title {
+  font-weight: 500;
+}
+
+.score-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.score-title {
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.score-field {
+  display: flex;
+  justify-content: space-between;
+}
+
+.score-container .score-field {
+  margin-bottom: 8px;
+}
+
+.btn-options {
+  padding: 10px 0;
+  border-radius: 4px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  background-color: white;
+  border: none;
+  flex: 1;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background-color 500ms ease;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background-color: rgba(200, 200, 200, 1);
+  transition: background-color 500ms ease;
+}

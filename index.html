@@ -6,13 +6,74 @@
   <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   <link rel="stylesheet" href="./style.css">
+
   <title>game-of-bubbles</title>
 </head>
 
 <body>
   <div id="app">
-    <h1>Game of Bubbles</h1>
+    <div class="game"></div>
+    <div class="side">
+      <div class="game-stats">
+        <div class="rounds-container">
+          <div class="rounds">
+            <p class="rounds-title">Round: </p>
+            <p class="rounds-number">1</p>
+          </div>
+            <div class="timer">
+              <p class="timer-title">
+                Time left:
+              </p>
+              <p class="timer-number">0:32</p>
+          </div>
+        </div>
+
+
+        <div class="score-container">
+          <p class="score-title">Score</p>
+          <div class="score-field">
+            <p class="player-name">
+              lwvemike
+            </p>
+            <p class="player-score">
+              100
+            </p>
+          </div>
+
+          <div class="score-field">
+            <p class="player-name">
+              ANTI-SCORE
+            </p>
+            <p class="player-score">
+              30
+            </p>
+          </div>
+        </div>
+        <div class="btn-options">
+          <button class="btn next-level">Next Level</button>
+          <button class="btn pause">Pause</button>
+          <button class="btn exit">Exit</button>
+        </div>
+
+
+      </div>
+
+      <div class="leaderboard">
+        <p class="leaderboard-title">Leaderboard</p>
+
+        <div class="leaderboard-score-container">
+        </div>
+
+      </div>
+      
+    </div>
   </div>
 
 
