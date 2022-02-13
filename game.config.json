@@ -1,0 +1,6 @@
+{
+  "MIN": 5,
+  "MAX": 95,
+  "BUBBLE_STARTING_POSITION": -50,
+  "GEN_SPEED": 10
+}
