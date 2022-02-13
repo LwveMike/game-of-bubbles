@@ -28,6 +28,7 @@ let FLOW_SPEED = Math.min(10, 2 + ROUND);
 let PAUSE_SCREEN;
 let isPaused = false;
 let GAME_OVER;
+let LEVEL_COMPLETED;
 
 
 const BUBBLES = [];
@@ -85,6 +86,9 @@ const startTimer = () => {
             clearInterval(APPEARENCE_INTERVAL);
             changeBtnState(false);
 
+            levelCompleted();
+            append(game, LEVEL_COMPLETED);
+
             pauseBtn.disabled = true;
             resumeBtn.disabled = true;
         } else if (ANTISCORE > SCORE){
@@ -123,6 +127,11 @@ const gameOverScreen = () => {
     setTimeout(() => {
         window.location.reload();
     }, 1000);
+}
+
+const levelCompleted = () => {
+    LEVEL_COMPLETED = createElement('div', { class: 'level-completed'});
+    LEVEL_COMPLETED.textContent = "Level Completed";
 }
 
 
@@ -203,6 +212,7 @@ const startNewRound = () => {
     changeBtnState(true);
     pauseBtn.disabled = false;
     resumeBtn.disabled = false;
+    game.removeChild(LEVEL_COMPLETED);
 
     clearInterval(TIMER_INTERVAL);
     clearInterval(APPEARENCE_INTERVAL);
